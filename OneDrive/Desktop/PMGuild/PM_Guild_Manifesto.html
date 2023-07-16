@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* CSS code for header, sections, and footer */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .header {
+            background-color: #026094;
+            color: #fff;
+            height: 10vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+        }
+        
+        .logo {
+            width: 70px;
+            height: 70px;
+            background-color: #026094;
+            border-radius: 0.5rem;
+            border: 2px solid #fff; /* Highlight the square enclosure */
+            
+        }
+        
+        .navigation {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .nav-icon {
+            color: #fff;
+            cursor: pointer;
+        }
+        
+        .nav-icon:hover {
+            color: blue;
+        }
+        
+        .nav-icon.clicked {
+            color: yellow;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .social-icon {
+            color: #fff;
+            cursor: pointer;
+        }
+        
+        .social-icon:hover {
+            color:  blue;
+        }
+        
+        .social-icon.clicked {
+            color: yellow;
+        }
+
+
+        .section {
+            padding: 20px;
+            background-color: #F6C358;
+            color: #000;
+        }
+
+        .section-heading {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .section-caption {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .section-line {
+            width: 100%;
+            height: 1px;
+            background-color: #000;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .details-section {
+            width: 48%;
+        }
+
+        .details-heading {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .details-box {
+            background-color: #fff;
+            border: 5px solid #026094;
+            border-radius: 0.5rem;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .contact-heading {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .message-form {
+            width: 48%;
+        }
+
+        .message-heading {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .message-box {
+            background-color: #fff;
+            border: 5px solid #026094;
+            border-radius: 0.5rem;
+            padding: 10px;
+        }
+
+        .form-input {
+            margin-bottom: 15px;
+        }
+
+        .form-input label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-input input,
+        .form-input textarea {
+            width: 100%;
+            padding: 5px;
+            font-size: 16px;
+            margin-top: 5px;
+        }
+
+        .submit-btn {
+            padding: 10px 20px;
+            background-color: #026094;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 5px;
+            }
+
+            .navigation {
+                gap: 10px;
+                font-size: 14px;
+            }
+
+            .nav-icon,
+            .social-icon {
+                font-size: 14px;
+            }
+
+            .section-heading {
+                font-size: 24px;
+            }
+
+            .section-caption {
+                font-size: 16px;
+            }
+
+            .details-section,
+            .message-form {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+
+        /* CSS code for additional name bar */
+        .name-bar {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: #026094;
+            color: #fff;
+        }
+
+        .logo {
+            width: 70px;
+            height: 70px;
+            background-color: #fff;
+            border-radius: 0.5rem;
+            border: 2px solid #026094;
+        }
+
+        .name {
+            margin-left: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* CSS code for footer */
+        .footer {
+            background-color: #fff;
+            border: 2px solid #026094;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .logo-left,
+        .logo-center,
+        .logo-right {
+            width: 70px; /* Adjust the width as needed */
+            height: 70px; /* Adjust the height as needed */
+            background-color: #fff;
+            border-radius: 0.5rem;
+            border: 2px solid #026094;
+        }
+    </style>
+</head>
+<body>
+    <header class="header" style="border-radius: 0.5rem;">
+        <div class="logo"><img src="GuildLogo.png" alt="Guild Logo" style="width: 100%; height: 100%; object-fit: contain;"></div>
+        <nav class="navigation" style="justify-content: center;">
+            <span class="nav-icon"><i class="fas fa-home"></i> Home</span>
+            <span class="nav-icon"><a href="PMABoutPage.html"><i class="fas fa-info-circle"></i></a> About Us</span>
+            <span class="nav-icon"><a href="PM_Guild_Manifesto.html"><i class="fas fa-graduation-cap"></i></a> Manifesto</span>
+            <span class="nav-icon"><a href="PM_Portfolios.html"><i class="fas fa-calendar-alt"></i></a> Portfolios </span>
+            <span class="nav-icon"><a href="PMContactMe.html"><i class="fas fa-envelope"></i></a> Contact Us</span>
+        </nav>
+        <div class="social-icons">
+            <span class="social-icon"><a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a> Linked In</span>
+            <span class="social-icon"><a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a> Facebook</span>
+            <span class="social-icon"><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a> Instagram</span>
+        </div>
+    </header>
+    <!-- ...existing code... -->
+
+<div class="section" style="border-radius: 0.5rem;">
+    <div class="section-heading" style="height: 100px; display: flex; align-items: center; justify-content: center; background-color: #F6C358;">
+        The Guild's Manifesto
+    </div>
+</div>
+<!-- ...existing code... -->
+
+    
+
+<div style="display: flex; gap: 20px; padding: 5px 0; font-size: larger;border: 3px solid #026094; border-radius: 0.5rem;">
+    <div style="width: 50%; border-right: 3px solid #026094;">
+        <h1 style="text-align: center; padding: 20px;">Our Purpose...</h1>
+    </div>
+    <div style="width: 50%; padding: 20px;">
+        <p>The LCIT PM Guild is built upon the collective intelligence of the people collaborating on itrather than providingpeople with detailed instructions.Always supportingour decision-making process on collaboration, leadership, and development.</p>
+    </div>
+</div>
+<div style="display: flex; gap: 20px;border-radius: 0.5rem;font-size: larger;border:3px solid #026094;background-color:#F6C358;">
+    <div style="width: 40%; border-right: 3px solid #026094; display: flex; align-items: center; justify-content: center;">
+        <!-- Enclosure for photo -->
+       <h1>Salient Features</h1>
+    </div>
+    
+    <div style="width: 60%; padding: 20px;">
+        <ol style="font-weight: bold;font-style: italic;">Individuals and interactions >>> processes and tools</ol>
+        <ol style="font-weight: bold;font-style: italic;">Executing new ideas >>> comprehensive documentation</ol>
+        <ol style="font-weight: bold;font-style: italic;">Team collaboration >>> negotiation</ol>
+        <ol style="font-weight: bold;font-style: italic;">Responding to change >>> following a plan</ol>
+    </div>
+</div>
+
+<!-- ...rest of the code... -->
+
+
+    <div class="name-bar" style="justify-content: space-between;border-radius: 0.5rem;">
+        <div class="logo"><img src="GuildLogo.png" alt="Guild Logo" style="width: 100%; height: 100%; object-fit: contain;"></div>
+        <div class="name"> Access Any Page</div>
+        <nav class="navigation" style="justify-content: center;">
+            <span class="nav-icon"><i class="fas fa-home"></i> Home</span>
+            <span class="nav-icon"><a href="PMABoutPage.html"><i class="fas fa-info-circle"></i></a> About Us</span>
+            <span class="nav-icon"><a href="PM_Guild_Manifesto.html"><i class="fas fa-graduation-cap"></i></a> Manifesto</span>
+            <span class="nav-icon"><a href="PM_Portfolios.html"><i class="fas fa-calendar-alt"></i></a> Portfolios </span>
+            <span class="nav-icon"><a href="PMContactMe.html"><i class="fas fa-envelope"></i></a> Contact Us</span>
+        </nav>
+        <div class="social-icons">
+            <span class="social-icon"><a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a> Linked In</span>
+            <span class="social-icon"><a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a> Facebook</span>
+            <span class="social-icon"><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a> Instagram</span>
+        </div>
+        
+    </div>
+    
+
+    <footer class="footer">
+        <div class="logo-left" style="border-radius: 0.5rem; border: 2px solid #026094; width: 200px; height: 50px;">
+            <img src="CestarLogo.png" alt="Cestar Logo" style="width: 100%; height: 100%; object-fit: contain;">
+        </div>
+        <div class="logo-center">
+            <img src="GuildLogo.png" alt="Guild Logo" style="width: 100%; height: 100%; object-fit: contain;">
+        </div>
+        <div class="logo-right" style="border-radius: 0.5rem; border: 2px solid #026094; width: 200px; height: 50px;">
+            <img src="LambtonLogo.png" alt="Lambton Logo" style="width: 100%; height: 100%; object-fit: contain;">
+        </div>
+    </footer>
+    
+
+    <!-- Rest of the page content -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+</body>
+</html>
